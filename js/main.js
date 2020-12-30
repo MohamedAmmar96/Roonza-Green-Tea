@@ -19,6 +19,7 @@ scrollButton.click(function() {
 });
 
 
+
 var wow = new WOW({
     boxClass: 'wow', // animated element css class (default is wow)
     animateClass: 'animated', // animation css class (default is animated)
@@ -142,7 +143,7 @@ $(document).ready(function() {
         $(".overlay-box").fadeIn(500);
     });
 
-    $(".close,.overlay-box").click(function() {
+    $(".nav-link,.close,.overlay-box").click(function() {
         $("body").removeClass("overflow")
         $(".menu .menu-icon").addClass("open-menu")
         $(".menu .menu-icon").removeClass("close-menu")
@@ -154,5 +155,24 @@ $(document).ready(function() {
         $(".config-box .nav-link .config-name").toggleClass("rotate");
         $(".mo-nav .config-list").css("transition", "none");
         $(".mo-nav .config-list").slideToggle(300);
+    });
+
+    // var about = $(".about").position();
+    // $(".toabout").click(function() {
+
+    //     $("html,body").animate({ scrollTop: about }, 600);
+    // });
+    // $('.toabout').click(function() {
+    //     $.scrollTo($('#about'), 1000);
+    // });
+    $(".toabout").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#about").offset().top
+        }, 500);
+    });
+    $(".toprop").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#prop").offset().top
+        }, 500);
     });
 });
