@@ -1,13 +1,24 @@
             /**************** Extra Small Screens From 501px to 767px ****************/
             
             @media (max-width:767px) {
+                .header-content {
+                    min-height: 120px;
+                }
                 .hidden-terms {
                     display: flex;
                     width: 33.33%;
                 }
                 .logo {
                     width: 33.33%;
-                    text-align: center;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                }
+                .logo-box {
+                    width: 60%;
+                }
+                .logo-img {
+                    max-width: 100%;
                 }
                 .rools {
                     padding-top: 0;
@@ -177,7 +188,7 @@
                 .prop-box {
                     flex-direction: column;
                     padding-top: 0px;
-                    background: url(../images/properties/background.png) no-repeat 50% 50%;
+                    background: none;
                     /* width: 100%; */
                 }
                 .prop-img-box {
@@ -185,17 +196,26 @@
                     margin-left: 0;
                     margin-top: 30px;
                     margin-bottom: 30px;
-                    width: 100%;
-                    text-align: center;
+                    width: 60%;
+                    margin: 0 auto;
                 }
                 .prop-img {
                     max-width: 100%;
                 }
                 .prop {
                     margin-bottom: 20px;
+                    flex-direction: column;
+                    align-items: center;
                 }
-                .prop-right {
-                    justify-content: flex-end;
+                .prop .prop-content {
+                    text-align: center;
+                    padding: 0 50px;
+                }
+                html[dir=ltr] .prop .prop-content {
+                    text-align: center;
+                }
+                .prop .tea-paper {
+                    display: none;
                 }
                 /* html[dir=ltr] .prop-right {
                     justify-content: flex-end;
@@ -281,17 +301,17 @@
                     order: 1;
                 }
                 .tea-test {
-                    background: url(../images/tea-test/section-background2.png) no-repeat;
+                    background: none;
                     background-size: cover;
-                    padding: 100px 0 50px 0;
+                    padding: 70px 0 50px 0;
                 }
                 .test-info {
-                    background: url(../images/tea-test/background.png) no-repeat center;
+                    background: none;
                     flex-direction: column;
                     margin-right: 0;
                 }
                 html[dir=ltr] .test-info {
-                    background: url(../images/tea-test/background.png) no-repeat center;
+                    background: none;
                     margin-left: 0;
                 }
                 .test-title {
@@ -306,14 +326,15 @@
                     text-align: center;
                 }
                 .test-img-box {
-                    width: 100%;
+                    width: 60%;
+                    margin: 0 auto;
                     text-align: center;
                 }
                 .test-img {
                     max-width: 100%;
                 }
                 .test-product {
-                    margin-top: 50px;
+                    margin-top: 30px;
                 }
                 .features {
                     padding: 50px 0;
@@ -349,6 +370,12 @@
             /**************** Extra Small Screens From 0 to 500px ****************/
             
             @media (max-width: 500px) {
+                .header-content {
+                    min-height: 100px;
+                }
+                .logo-box {
+                    width: 70%;
+                }
                 .menu {
                     font-size: 24px;
                 }
@@ -363,17 +390,38 @@
                     margin-left: 0;
                     margin-right: 20px;
                 }
+                .prop .prop-content {
+                    text-align: center;
+                    padding: 0 10px;
+                }
+                .prop-img-box {
+                    width: 70%;
+                }
+                .test-img-box {
+                    width: 70%;
+                    margin: 0 auto;
+                    text-align: center;
+                }
             }
             /*********************  Small Screens *********************/
             
             @media (min-width: 768px) and (max-width: 991px) {
+                .header-content {
+                    min-height: 130px;
+                }
                 .hidden-terms {
                     display: flex;
                     width: 33.33%;
                 }
                 .logo {
                     width: 33.33%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
                     text-align: center;
+                }
+                .logo-box {
+                    width: 70%;
                 }
                 .rools {
                     padding-top: 0;
@@ -543,7 +591,7 @@
                 .prop-box {
                     flex-direction: column;
                     padding-top: 0px;
-                    background: url(../images/properties/background.png) no-repeat 50% 50%;
+                    background: none;
                     /* width: 100%; */
                 }
                 .prop-img-box {
@@ -551,7 +599,8 @@
                     margin-left: 0;
                     margin-top: 30px;
                     margin-bottom: 30px;
-                    width: 100%;
+                    width: 45%;
+                    margin: 0 auto;
                     text-align: center;
                 }
                 .prop-img {
@@ -570,7 +619,7 @@
                     text-align: center;
                 }
                 .prop .tea-paper {
-                    margin-bottom: 10px;
+                    display: none;
                 }
                 .prop-right .tea-paper-right {
                     order: 1;
@@ -680,12 +729,12 @@
                     padding: 100px 0 50px 0;
                 }
                 .test-info {
-                    background: url(../images/tea-test/background.png) no-repeat center;
+                    background: none;
                     flex-direction: column;
                     margin-right: 0;
                 }
                 html[dir=ltr] .test-info {
-                    background: url(../images/tea-test/background.png) no-repeat center;
+                    background: none;
                     margin-left: 0;
                 }
                 .test-title {
@@ -700,14 +749,15 @@
                     text-align: center;
                 }
                 .test-img-box {
-                    width: 100%;
+                    width: 45%;
+                    margin: 0 auto;
                     text-align: center;
                 }
                 .test-img {
                     max-width: 100%;
                 }
                 .test-product {
-                    margin-top: 50px;
+                    margin-top: 30px;
                 }
                 .features {
                     padding: 50px 0;

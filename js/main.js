@@ -8,6 +8,17 @@ $(window).on('load', function() {
 })
 
 
+// Scroll To Top Button 
+var scrollButton = $(".scroll-top");
+$(window).scroll(function() {
+    ($(this).scrollTop() >= 500) ? scrollButton.fadeIn(300): scrollButton.fadeOut(300);
+});
+// Click Button to scroll top 
+scrollButton.click(function() {
+    $("html,body").animate({ scrollTop: 0 }, 600);
+});
+
+
 var wow = new WOW({
     boxClass: 'wow', // animated element css class (default is wow)
     animateClass: 'animated', // animation css class (default is animated)
