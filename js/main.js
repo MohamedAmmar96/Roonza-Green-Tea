@@ -77,30 +77,47 @@ $(document).ready(function() {
     });
 
 
-
-    var add = document.getElementById('add');
-    var sub = document.getElementById('sub');
-    var count = document.getElementById('counter-input');
-
-    $(add).click(function() {
-        count.value = parseInt(count.value) + 1;
+    // var maxVal = parseInt($(".counter-input").attr("max-val"));
+    // var minVal = parseInt($(".counter-input").attr("min-val"));
+    $(".add").on('click', function() {
+        var value = $(this).siblings(".counter-input").val()
+            // var $parentElm = $(this).parents(".counter");
+            // var value = $parentElm.find(".counter-input").val();
+        value++;
+        // if (value < maxVal) {}
+        $(this).siblings(".counter-input").val(value);
     });
-
-    $(sub).click(function() {
-        count.value = parseInt(count.value) - 1;
+    $(".sub").on('click', function() {
+        var value = $(this).siblings(".counter-input").val()
+            // var $parentElm = $(this).parents(".counter");
+            // var value = $parentElm.find(".counter-input").val();
+        value--;
+        // if (value > minVal) {}
+        $(this).siblings(".counter-input").val(value);
     });
+    // var add = document.getElementById('add');
+    // var sub = document.getElementById('sub');
+    // var count = document.getElementById('counter-input');
 
-    var add2 = document.getElementById('add2');
-    var sub2 = document.getElementById('sub2');
-    var count2 = document.getElementById('counter-input2');
+    // $(add).click(function() {
+    //     count.value = parseInt(count.value) + 1;
+    // });
 
-    $(add2).click(function() {
-        count2.value = parseInt(count2.value) + 1;
-    });
+    // $(sub).click(function() {
+    //     count.value = parseInt(count.value) - 1;
+    // });
 
-    $(sub2).click(function() {
-        count2.value = parseInt(count2.value) - 1;
-    });
+    // var add2 = document.getElementById('add2');
+    // var sub2 = document.getElementById('sub2');
+    // var count2 = document.getElementById('counter-input2');
+
+    // $(add2).click(function() {
+    //     count2.value = parseInt(count2.value) + 1;
+    // });
+
+    // $(sub2).click(function() {
+    //     count2.value = parseInt(count2.value) - 1;
+    // });
     if ($(window).width() <= 991) {
         $(".features .features-box").addClass("owl-carousel owl-theme");
         $(".features-box .feature").removeClass("owl-carousel");
